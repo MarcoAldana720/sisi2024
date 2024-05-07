@@ -53,7 +53,7 @@
 
         <?php
           include "maps.php";
-        ?>
+         ?>
     </div>
     
 
