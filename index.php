@@ -11,12 +11,30 @@
     <!--CSS-->
     <link rel="preload" href="css/styles.css" as="style">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style-clima.css">
+
 </head>
 <body>
 
     <?php
         include "head.php";
     ?>
+    <div>
+    <div id="contenedor">
+        <div id="caja1">
+            <p id="temperatura-valor"></p>
+            <p id="temperatura-descripcion"></p>
+        </div>
+        <div id="caja2">
+            <p id="ubicacion"></p> 
+        </div>
+        <div id="caja3">
+            <p>Veloc. del Viento</p>
+            <p id="viento-velocidad"></p>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</div>
 
     <section class="marginLogin">
       <h1>Registro al SISI 2024</h1>
