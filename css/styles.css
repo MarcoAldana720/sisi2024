@@ -1,5 +1,14 @@
 /* styles.css */
 
+#map
+{
+    height: 150px;
+    width: 500px;
+}
+main
+{
+    align-items: flex-end;
+}
 body {
     font-family: 'Arial', sans-serif;
     display: flex;
