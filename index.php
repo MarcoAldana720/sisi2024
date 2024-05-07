@@ -19,7 +19,6 @@
     <?php
         include "head.php";
     ?>
-    <div>
     <div id="contenedor">
         <div id="caja1">
             <p id="temperatura-valor"></p>
@@ -34,8 +33,6 @@
         </div>
     </div>
     <script src="app.js"></script>
-</div>
-
     <section class="marginLogin">
       <h1>Registro al SISI 2024</h1>
       <!-- MANDAR UN REGISTRO EN LA BD -->
