@@ -21,15 +21,15 @@
     ?>
     <div id="contenedor">
         <div id="caja1">
-            <p id="temperatura-valor"></p>
-            <p id="temperatura-descripcion"></p>
+            <p class="cli" id="temperatura-valor"></p>
+            <p class="cli" id="temperatura-descripcion"></p>
         </div>
         <div id="caja2">
-            <p id="ubicacion"></p> 
+            <p class="cli" id="ubicacion"></p> 
         </div>
         <div id="caja3">
-            <p>Veloc. del Viento</p>
-            <p id="viento-velocidad"></p>
+            <p class="cli" >Veloc. del Viento</p>
+            <p class="cli" id="viento-velocidad"></p>
         </div>
     </div>
     <script src="app.js"></script>
