@@ -138,11 +138,36 @@ button {
     border: none;
     border-radius: 5px;
     margin-top: 12px;
+    width: 215px;
 }
 
 /* Estilos cuando el mouse está sobre el botón */
 .btn-primary:hover {
     background-color: #9fafc0;
+}
+
+/* Estilo del boton de google */
+.btn_google {
+    /* border: 1px red solid; */
+    border-radius: 5px;
+    padding: 10px 15px;
+    width: 184px;
+    margin: auto;
+    text-align: center;
+    background-color: #cecece;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn_google a {
+    text-decoration: none;
+    color: black;
+}
+
+.btn_google img {
+    width: 20px;
+    padding: 0px 5px;
 }
 
 .form-control {

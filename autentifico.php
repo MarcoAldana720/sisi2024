@@ -1,29 +1,22 @@
 <?php
-    require_once 'conexion.php'; // Conexion De La Base De Datos
+    require_once 'conexion.php';
 
     session_start();
     error_reporting(0);
 
-    $matricula = $_POST['reg_mat'];
-    $contrasena = $_POST['reg_con'];
+    $matricula = addslashes($_POST['matricula']);
+    $contrasena = addslashes($_POST['contrasena']);
 
-    $_SESSION['matricula'] = $matricula;
+    $_SESSION['reg_mat'] = $matricula;
 
-    $sql = "SELECT * FROM registro WHERE reg_mat = '$matricula' AND reg_con = '$contrasena'";
+    $sql = "SELECT * FROM registro WHERE matricula = '$matricula' AND contrasena = '$contrasena'";
+    
     $resultado = mysqli_query($conectar, $sql);
 
     if(mysqli_num_rows($resultado) > 0) {
+        session_start();
         $_SESSION["autentificado"] = "SI";
-        $filas = mysqli_fetch_array($resultado);
-        // AQUI MODIFICARLO A SU ESTILO DE LAS TABLAS PARA RELACIONARLO
-        if ($filas['rol'] == 1) {
-            header("location: admin/index.php"); // Vista Principal Del Administrador/Profesor
-        } elseif ($filas['rol'] == 2) {
-            header("location: client/index.php"); // Vista Principal Del Usuario/Estudiante
-        }
-
-        mysqli_free_result($resultado);
-        mysqli_close($conectar);
+        header("location: bienvenida.php");
     } else {
         echo "
             <script>
@@ -31,5 +24,8 @@
             </script>
         ";
     }
+
+    mysqli_free_result($resultado);
+    mysqli_close($conectar);
 
 ?>

@@ -6,6 +6,8 @@
     <title>Iniciar sesión | SISI 2024</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="shortcut icon" href="img/itm logo.png" type="image/x-icon">
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/4abe0801d5.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -35,8 +37,14 @@
                     <input type="password" class="form-control margen" placeholder="Ingrese su contraseña" id="contrasena" name="contrasena" required>
                 </div>
                 <div class="btn_center">
-                    <button type="submit" class="btn-primary">Entrar</button>
+                    <button type="submit" class="btn-primary">INICIAR SESION</button>
                 </div>
+                <br>
+                <div class="btn_google">
+                <img src="img/google.png" alt="">
+                <?php require ('autentifico_google.php'); ?>
+                <a href="<?php echo $client->createAuthUrl() ?>">USAR GOOGLE</a>
+            </div>
                 <!-- INICIO: Alerta De Autentificacion -->
                 <?php
                     $errorusuario = isset($_GET["errorusuario"]);
