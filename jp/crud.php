@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Participantes | SISI 2024</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles_test.css">    
-    <link rel="shortcut icon" href="img/itm logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/styles_test.css">
+    <link rel="shortcut icon" href="../img/itm logo.png" type="image/x-icon">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/4abe0801d5.js" crossorigin="anonymous"></script>
 
@@ -19,7 +19,7 @@
     ?>
 
     <?php
-        require "conexion.php";
+        require "../conexion.php";
         $todos_datos = "SELECT * FROM registro ORDER BY id ASC";
         $resultado = mysqli_query($conectar, $todos_datos);
     ?>
@@ -29,12 +29,12 @@
             <table class ="table table-striped">
                 <thead>
                     <tr>
-                        <th>Matricula</th>
-                        <th>Nombre</th>
-                        <th>Correo</th>
-                        <th>Celular</th>
-                        <th>Semestre</th>
-                        <th>Accion</th>
+                        <th>学費</th>
+                        <th>名前</th>
+                        <th>郵便</th>
+                        <th>携帯電話</th>
+                        <th>学期</th>
+                        <th>アクション</th>
                     </tr>
                 </thead>
                 <?php
@@ -61,8 +61,8 @@
         </div>
         
 
-        <div class=text-center>
-            <a href="login.php" class="btn btn-secondary">Regresar al inicio</a>
+        <div class="text-center">
+            <a href="login.php" class="btn btn-secondary">トップに戻る</a>
         </div>
     </section>
     
@@ -70,7 +70,6 @@
         include "reut/tail.php";
     ?>
 
-    <!-- LLAMA EL ARCHIVO DE TRADUCTOR -->
-    <script src="app_2.js"></script>
+    <script src="../app_2.js"></script>
 </body>
 </html>

@@ -282,3 +282,47 @@ td {
         margin-bottom: 5px;
     }
 }
+
+/* ESTILO DEL CAMBIO DE IDIOMA */
+.en {
+    color: #333;
+}
+
+.es {
+    color: #691313;
+}
+
+.check {
+    position: relative;
+    width: 45px;
+}
+
+.check:before {
+    content: '';
+    position: absolute;
+    width: 45px;
+    height: 20px;
+    background: #333;
+    border-radius: 25px;
+}
+
+.check:after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 20px;
+    background: #fff;
+    border-radius: 25px;
+    transition: 0.25s;
+    border: 2px solid #333;
+    box-sizing: border-box;
+}
+
+.check:checked:after {
+    left: 25px;
+    border: 2px solid #691313;
+}
+
+.check:checked:before {
+    background: #691313;
+}

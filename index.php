@@ -5,28 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro | SISI 2024</title>
     <link rel="shortcut icon" href="img/itm logo.png" type="image/x-icon">
-    <!--Normalize-->
-    <link rel="preload" href="css/normalize.css" as="style">
-    <link rel="stylesheet" href="css/normalize.css">
     <!--CSS-->
-    <link rel="preload" href="css/styles.css" as="style">
-    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles_test.css">
 
 </head>
 <body>
-
-    <?php
-        include "head.php";
-    ?>
-    
+  <?php
+      include "reut/head.php";
+  ?>  
     <div>
-      <?php
-          include "clima.php";
-      ?>
-      <section class="marginLogin">
+      <section class="formulario bg-white col-10 col-md-6 mx-auto text-center">
+        <div class="banner">
+          <img src="img/itm logo.png" class="img-fluid header-img" alt="Banner SISI 2024">
+        </div>
         <h1>Registro al SISI 2024</h1>
         <!-- MANDAR UN REGISTRO EN LA BD -->
-        <form action="registrar.php" method="POST">
+        <form action="registrar.php" method="POST" class="col-9 mx-auto">
               <div class="form-group">
                 <label for="exampleFormControlInput1">Nombre completo: </label>
                 <input type="text" class="form-control" placeholder="Escriba su nombre" id="reg_nom" name="reg_nom" required>
@@ -67,21 +62,23 @@
                   </select>
                 </div>
                 <div class="btn_center">
-                  <button type="submit" class="btn-primary">Registrarse</button>
+                  <button type="submit" class="btn btn-danger">Registrarse</button>
                   <a href="login.php" class="a_login">Iniciar sesión</a>
                 </div>
         </form>
       </section>
 
       <?php
-          include "maps.php";
+          include "maps/maps.php";
       ?>
     </div>
 
 
     <?php
-        include "tail.php";
+        include "reut/tail.php";
     ?>
 
+  <!-- LLAMA EL ARCHIVO DE TRADUCTOR -->
+  <script src="app_2.js"></script>
 </body>
 </html>
